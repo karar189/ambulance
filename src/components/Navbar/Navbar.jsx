@@ -6,10 +6,18 @@ const Navbar = () => {
     <>
       <nav>
         <ul>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="./booking">Booking</Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            Home
+          </Link>
+          <Link to="/about" style={{ textDecoration: "none" }}>
+            About
+          </Link>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
+            Contact
+          </Link>
+          <Link to="./booking" style={{ textDecoration: "none" }}>
+            Booking
+          </Link>
         </ul>
       </nav>
     </>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Address from "./Address/Address";
 import Ambulance from "./Ambulance/Ambulance";
 import Hospital from "./Hospital/Hospital";
+import Progressbar from "../../../components/Progressbar/Progressbar";
+import "./style.css";
 
 const Form = () => {
   const [page, setPage] = useState(0);
@@ -41,11 +43,24 @@ const Form = () => {
             Back
           </button>
           <button
-            disabled={page == FormTitles.length - 1}
-            onClick={() => setPage((currPage) => currPage + 1)}
+            onClick={() => {
+              if (page == FormTitles.length - 1) {
+                alert("Booking Confirmed");
+              } else {
+                setPage((currPage) => currPage + 1);
+              }
+            }}
           >
-            Proceed
+            {page == FormTitles.length - 1 ? "Submit" : "Next"}
           </button>
+          {/* <Progressbar page={page} /> */}
+          <div className="progress-bar">
+            <div
+              style={{
+                width: page === 0 ? "20.3%" : page == 1 ? "66.6%" : "100%",
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </>
