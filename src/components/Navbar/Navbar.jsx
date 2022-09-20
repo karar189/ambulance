@@ -1,11 +1,18 @@
 import React from "react";
 import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import "./style.css";
+import Logo from "../../assets/LOGO.svg"
 
 const Navbar = () => {
   return (
     <>
       <nav>
-        <ul>
+      <div>
+              <img src={Logo} alt="LOGO"
+                  srcset="" className="logo"/>
+          </div>
+
+        <ul className="links">
           <Link to="/" style={{ textDecoration: "none" }}>
             Home
           </Link>
@@ -19,6 +26,9 @@ const Navbar = () => {
             Booking
           </Link>
         </ul>
+        <div >
+              <button className="btn">Sign In</button>
+          </div>
       </nav>
     </>
   );
