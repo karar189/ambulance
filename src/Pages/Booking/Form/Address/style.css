@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+
+
+.address-box {
+  padding: 0px;
+}
+.address-wrap {
+  padding: 10px;
+}
+input {
+  background: #ffffff;
+  border: 1px solid #455a64;
+  border-radius: 5px;
+  width: 400px;
+  height: 46px;
+}
+::placeholder {
+  opacity: 0.9;
+  padding-left: 10px;
+}
+
+.your-location{
+  padding-bottom: 100px;
+
+
+
+}
