@@ -12,6 +12,14 @@ const Form = () => {
     "Select your Hospital",
     "Select Ambulance",
   ];
+  const [formData, setFormData] = useState({
+    address: "",
+    landmark: "",
+    pincode: "",
+    search: "",
+    hospital: "",
+    ambulance: "",
+  });
 
   const pageDisplay = () => {
     switch (page) {
