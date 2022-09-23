@@ -12,8 +12,8 @@ input {
   background: #ffffff;
   border: 1px solid #455a64;
   border-radius: 5px;
-  width: 400px;
-  height: 46px;
+  width: 300px;
+  height: 47px;
 }
 ::placeholder {
   opacity: 0.9;

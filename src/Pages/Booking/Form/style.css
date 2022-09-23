@@ -1,68 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-
-
-.progress-bar {
-  width: 400px;
-  height: 10px;
-  background-color:  #041311;
-  margin-bottom: 50px;
-}
-
-.progress-bar div {
-  width: 20.3%;
-  height: 100%;
-  background-color: #5FDCC6;
-  transition: width 0.5s ease-in-out;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .form-container {
- 
-  width: 480px;
-  height: 600px;
-  padding: 50px ;
+  width: 300px;
+  height: 450px;
+  padding: 50px;
   background: #263238;
   opacity: 0.85;
   border-radius: 10px;
+  position: absolute;
 }
-
-.header{
+.header {
   color: rgb(249, 248, 248);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
-.footer{
+.progress-bar {
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+  width: 400px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 30px 0px 0px 30px;
+}
+.progress-bar div {
+  width: 20.3%;
+  height: 100%;
+  background-color: #5fdcc6;
+  transition: width 0.5s ease-in-out;
+  border-radius: 27px;
+}
+
+.footer {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+  position: absolute;
+  bottom: 50px;
   /* top: 400px;
   position: relative; */
-  
 }
 
-.back-btn{
-  border: 2px solid #5FDCC6;
-border-radius: 5px;
-color: aliceblue;
-height: 40px;
-width: 120px;
-background: #263238;
-opacity: 0.85;
-border-radius: 5px;
-font-size: 23px;
-font-family: 'Lato', sans-serif;
-
-}
-
-.next-btn{
+.back-btn {
+  border: 2px solid #5fdcc6;
+  border-radius: 5px;
+  color: aliceblue;
   height: 40px;
   width: 120px;
-  background:#5FDCC6;
+  background: #263238;
+  opacity: 0.85;
+  border-radius: 5px;
+  font-size: 23px;
+  font-family: "Lato", sans-serif;
+}
+
+.next-btn {
+  height: 40px;
+  width: 120px;
+  background: #5fdcc6;
   border-color: #263238;
   border-radius: 5px;
   font-size: 20px;
-  font-weight: 400px ;
-  font-family: 'Lato', sans-serif;
+  font-weight: 400px;
+  font-family: "Lato", sans-serif;
 }
 /* 
 .progress-bar{
