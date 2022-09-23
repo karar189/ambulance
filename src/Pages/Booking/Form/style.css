@@ -5,14 +5,14 @@
 .progress-bar {
   width: 400px;
   height: 10px;
-  background-color: #263238;
+  background-color:  #041311;
   margin-bottom: 50px;
 }
 
 .progress-bar div {
   width: 20.3%;
   height: 100%;
-  background-color: #5fdcc6;
+  background-color: #5FDCC6;
   transition: width 0.5s ease-in-out;
 }
 
@@ -64,7 +64,7 @@ font-family: 'Lato', sans-serif;
   font-weight: 400px ;
   font-family: 'Lato', sans-serif;
 }
-
+/* 
 .progress-bar{
 
   position: static ;
@@ -78,4 +78,4 @@ font-family: 'Lato', sans-serif;
 
 
 
-}
+} */
