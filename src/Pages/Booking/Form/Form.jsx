@@ -61,6 +61,7 @@ const Form = () => {
           >
             {page == FormTitles.length - 1 ? "Submit" : "Next"}
           </button>
+
           {/* <Progressbar page={page} /> */}
           <div className="progress-bar">
             <div
