@@ -1,0 +1,10 @@
+.booking {
+  display: flex;
+}
+.container-form {
+  padding: 40px;
+}
+.container-map {
+  padding: 40px;
+  background-color: antiquewhite;
+}
