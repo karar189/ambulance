@@ -39,7 +39,7 @@ const Form = () => {
       <div className="form-container">
         <div className="header">
           <h1>
-            <img src={locator} alt="Logo" />
+            <img className = "loc-img" src={locator} alt="Logo" />
             {FormTitles[page]}
           </h1>
         </div>

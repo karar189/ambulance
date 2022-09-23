@@ -8,9 +8,15 @@
   border-radius: 10px;
   position: absolute;
 }
+
 .header {
   color: rgb(249, 248, 248);
   font-family: "Lato", sans-serif;
+}
+
+.loc-img{
+  padding-right: 10px;
+
 }
 
 .progress-bar {
