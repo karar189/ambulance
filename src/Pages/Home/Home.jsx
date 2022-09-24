@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import car from "../../assets/ambuu.svg"
 
 const Home = () => {
   return (
@@ -20,6 +21,11 @@ const Home = () => {
 
             <div>
               <button class="Acc-btn"><div className="Inside-button" > Create your Account</div></button>
+            </div>
+            <div className="ambulance-animation">
+              <div className="car">
+                <img src={car} className="car1" />
+              </div>
             </div>
           </div>
         </div>

@@ -3,7 +3,10 @@ import React from "react";
 const Hospital = () => {
   return (
     <>
-      <div className="search-bar">Searchbar</div>
+      <div className="search-bar">
+        {" "}
+        <input type="text" placeholder="Search.." />
+      </div>
       <div className="hospital-list">
         <h2>Nearest Hospitals</h2>
         <div className="hospital">
