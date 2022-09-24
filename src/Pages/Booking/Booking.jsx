@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form/Form";
-import Map from "./Map/Map";
+import MapBoxL from "./MapboxL/MapBoxL";
 import "./style.css";
 
 const Booking = () => {
@@ -8,7 +8,7 @@ const Booking = () => {
     <>
       <div className="booking">
         <div className="container-map">
-          <Map />
+          <MapBoxL />
         </div>
         <div className="container-form">
           <Form />
