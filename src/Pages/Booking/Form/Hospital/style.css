@@ -14,7 +14,7 @@
   border-bottom: 1px solid #ffffff;
 }
 
-.hospital {
+.hospital-1 {
   font-family: "Lato";
   font-style: normal;
   font-weight: 600;
@@ -46,11 +46,36 @@
   color: #5fdcc6;
 }
 
-.rel{
+.ret{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.name-dist-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.hospital-2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+
+
+
 
 
 
