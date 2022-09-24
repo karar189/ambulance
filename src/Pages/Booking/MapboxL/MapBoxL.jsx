@@ -1,61 +1,75 @@
 import React, { useRef, useEffect, useState } from "react";
-import "mapbox-gl/dist/mapbox-gl.css";
-import Map, { Marker, GeolocateControl } from "react-map-gl";
-import mapboxgl from "mapbox-gl";
-import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete, // necessary for Autocomplete
+  DirectionsRenderer, // necessary for DirectionsRenderer
+} from "@react-google-maps/api";
+const centre = {
+  lat: 22.5726,
+  lng: 88.3639,
+};
+
 const MapBoxL = () => {
-  //   var directions = new MapboxDirections({
-  //     accessToken:
-  //       "pk.eyJ1Ijoic3dldGFrYXJhciIsImEiOiJjbDhmbGU4eXcwbWlhM3BwOXR1ZnZ1ZDM0In0.rN52jL7R9_rNZBEVaE9liQ",
-  //     unit: "metric",
-  //     profile: "mapbox/cycling",
-  //   });
-  //   var map = new mapboxgl.Map({
-  //     container: "map",
-  //     style: "mapbox://styles/mapbox/streets-v9",
-  //   });
-  //   map.addControl(directions, "top-left");
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: "AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI",
+    libraries: ["places"], // necessary for Autocomplete
+  });
+  const [map, setMap] = useState(/** @type google.maps.Map */ (null));
+  const [directions, setDirections] = useState(null);
+  const [distance, setDistance] = useState("");
+  const [duration, setDuration] = useState("");
+  const originRef = useRef();
+  const destinationRef = useRef();
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+  const calculateRoute = async () => {
+    if (originRef.current.value === "" || destinationRef.current.value === "") {
+    }
+    // eslint-disable-next-line no-undef
+    const directionsService = new google.maps.DirectionsService();
+    const results = await directionsService.route({
+      origin: originRef.current.value,
+      destination: destinationRef.current.value,
+      // eslint-disable-next-line no-undef
+      travelMode: google.maps.TravelMode.DRIVING,
+    });
+    setDirections(results);
+    setDistance(results.routes[0].legs[0].distance.text);
+    setDuration(results.routes[0].legs[0].duration.text);
+  };
   return (
     <>
-      <Map
-        mapboxAccessToken="pk.eyJ1Ijoic3dldGFrYXJhciIsImEiOiJjbDhmbGU4eXcwbWlhM3BwOXR1ZnZ1ZDM0In0.rN52jL7R9_rNZBEVaE9liQ"
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
-        }}
-        style={{
-          width: "600px",
-          height: "400px",
-          borderRadius: "10px",
-          border: "1px solid #000",
-        }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      >
-        <Marker
-          longitude={-122.4}
-          latitude={37.8}
-          draggable={true}
-          offsetLeft={-20}
-          style={{
-            cursor: "pointer",
-            zIndex: 100,
-            width: "60px",
-            height: "60px",
+      <div className="map">
+        <Autocomplete>
+          <input type="text" placeholder="your location" ref={originRef} />
+        </Autocomplete>
+        <Autocomplete>
+          <input type="text" placeholder="to hospital" ref={destinationRef} />
+        </Autocomplete>
+        <button className="calculate-route" onClick={calculateRoute}>
+          Calculate Route
+        </button>
+        <GoogleMap
+          mapContainerStyle={{
+            height: "400px",
+            width: "500px",
+          }}
+          zoom={10}
+          center={centre}
+          options={{
+            // zoomControl: false,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
           }}
         >
-          <div>❤️</div>
-        </Marker>
-        <GeolocateControl trackUserLocation={true} />
-        {/* <MapboxDirections
-          accessToken="pk.eyJ1Ijoic3dldGFrYXJhciIsImEiOiJjbDhmbGU4eXcwbWlhM3BwOXR1ZnZ1ZDM0In0.rN52jL7R9_rNZBEVaE9liQ"
-          origin={[-122.4, 37.8]}
-          destination={[-122.4, 37.8]}
-          profile="mapbox/driving"
-          unit="metric"
-          mapstyles="mapbox://styles/mapbox/streets-v9"
-        /> */}
-      </Map>
+          <Marker position={centre} />
+          {directions && <DirectionsRenderer directions={directions} />}
+        </GoogleMap>
+      </div>
     </>
   );
 };
