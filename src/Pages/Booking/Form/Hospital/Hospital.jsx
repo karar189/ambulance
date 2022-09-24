@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Hospital = () => {
   return (
@@ -8,11 +9,21 @@ const Hospital = () => {
         <input type="text" placeholder="Search.." />
       </div>
       <div className="hospital-list">
-        <h2>Nearest Hospitals</h2>
+        <h2 className="near-hosp">Nearest Hospitals</h2>
+        <div className="line">
+          <hr></hr>
+        </div>
+       
         <div className="hospital">
-          <div className="hospital-name">Hospital 1</div>
-          <div className="hospital-address">Address 1</div>
-          <div className="hospital-distance">5km</div>
+        <div className="name-dist">
+          <div className="hospital-name">Apollo  hospital,  College square</div>
+          <div className="hospital-distance">10km</div>
+          </div>
+          <br/>
+          
+          
+         {/* <div className="hospital-address">Address 1</div>  */}
+          
           <div className="rating">4.5/5</div>
           <div className="emergency">ER available</div>
           <div className="time">15mins</div>
