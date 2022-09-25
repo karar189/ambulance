@@ -1,11 +1,26 @@
 import React from "react";
+import {
+  Autocomplete, // necessary for Autocomplete
+} from "@react-google-maps/api";
 
-const Hospital = () => {
+const Hospital = ({ formData, setFormData, forwardedRef }) => {
+  const handleInputChangeHospital = (e) => {
+    setFormData({ ...formData, search: e.target.value });
+    console.log(e.target.value);
+  };
   return (
     <>
       <div className="search-bar">
         {" "}
-        <input type="text" placeholder="Search.." />
+        <Autocomplete>
+          <input
+            type="text"
+            placeholder="Search.."
+            value={formData.search}
+            onChange={handleInputChangeHospital}
+            ref={forwardedRef[1]}
+          />
+        </Autocomplete>
       </div>
       <div className="hospital-list">
         <h2>Nearest Hospitals</h2>

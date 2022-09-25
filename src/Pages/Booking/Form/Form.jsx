@@ -5,33 +5,44 @@ import Hospital from "./Hospital/Hospital";
 import Progressbar from "../../../components/Progressbar/Progressbar";
 import locator from "../../../assets/LOGO-map.svg";
 import "./style.css";
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 
-const Form = () => {
+const Form = ({
+  formData,
+  setFormData,
+  forwardedRef,
+  calculateRoute,
+  test,
+}) => {
   const [page, setPage] = useState(0);
   const FormTitles = [
     "Enter your address",
     "Select your Hospital",
     "Select Ambulance",
   ];
-  const [formData, setFormData] = useState({
-    address: "",
-    landmark: "",
-    pincode: "",
-    search: "",
-    hospital: "",
-    ambulance: "",
-  });
 
   const pageDisplay = () => {
     switch (page) {
       case 0:
-        return <Address />;
+        return (
+          <Address
+            formData={formData}
+            setFormData={setFormData}
+            forwardedRef={forwardedRef}
+          />
+        );
       case 1:
-        return <Hospital />;
+        return (
+          <Hospital
+            formData={formData}
+            setFormData={setFormData}
+            forwardedRef={forwardedRef}
+          />
+        );
       case 2:
-        return <Ambulance />;
+        return <Ambulance formData={formData} setFormData={setFormData} />;
       default:
-        return <Address />;
+        return <Address formData={formData} setFormData={setFormData} />;
     }
   };
   return (
@@ -39,7 +50,7 @@ const Form = () => {
       <div className="form-container">
         <div className="header">
           <h1>
-            <img className = "loc-img" src={locator} alt="Logo" />
+            <img className="loc-img" src={locator} alt="Logo" />
             {FormTitles[page]}
           </h1>
         </div>
@@ -59,6 +70,12 @@ const Form = () => {
                 alert("Booking Confirmed");
               } else {
                 setPage((currPage) => currPage + 1);
+                if (page == FormTitles.length - 2) {
+                  {
+                    // test();
+                    calculateRoute();
+                  }
+                }
               }
             }}
           >

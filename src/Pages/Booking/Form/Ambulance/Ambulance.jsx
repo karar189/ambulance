@@ -1,9 +1,10 @@
 import React from "react";
 import Payment from "./Payment/Payment";
 
-const Ambulance = () => {
+const Ambulance = ({ formData, setFormData }) => {
   return (
     <>
+      {/* wrap this ambulance div in link tag and link it to the ambulance booked page */}
       <div className="ablulance-card">
         <img src="" alt="logo" />
         <div className="ambulance-name">AMBR Go</div>
