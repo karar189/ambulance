@@ -14,10 +14,6 @@
   font-family: "Lato", sans-serif;
 }
 
-.loc-img {
-  padding-right: 10px;
-}
-
 .progress-bar {
   position: absolute;
   bottom: -50px;
@@ -39,25 +35,35 @@
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
-  position: absolute;
-  bottom: 50px;
+}
+button {
+  border: none;
 }
 
 .back-btn {
   border: 2px solid #5fdcc6;
   border-radius: 5px;
   color: aliceblue;
-  height: 40px;
+  height: 43px;
   width: 120px;
   background: #263238;
   opacity: 0.85;
   border-radius: 5px;
   font-size: 23px;
   font-family: "Lato", sans-serif;
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+}
+.back-btn:hover {
+  background: #5fdcc6;
+  color: #263238;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .next-btn {
-  height: 40px;
+  height: 43px;
   width: 120px;
   background: #5fdcc6;
   border-color: #263238;
@@ -65,4 +71,13 @@
   font-size: 20px;
   font-weight: 400px;
   font-family: "Lato", sans-serif;
+  position: absolute;
+  bottom: 50px;
+  right: 70px;
+}
+.next-btn:hover {
+  background: #b1fff1;
+
+  cursor: pointer;
+  transition: 0.2s;
 }

@@ -56,10 +56,26 @@ const Form = ({
     <>
       <div className="form-container">
         <div className="header">
-          <h1>
-            <img className="loc-img" src={locator} alt="Logo" />
-            {FormTitles[page]}
-          </h1>
+          <div
+            className="header-title"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              className="loc-img"
+              src={locator}
+              alt="Logo"
+              style={{
+                padding: "2px",
+                marginRight: "5px",
+              }}
+            />
+            <h1>{FormTitles[page]}</h1>
+          </div>
         </div>
         <div className="body">{pageDisplay()}</div>
         <div className="footer">

@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import car from "../../assets/ambuu.svg";
 import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import gif1 from "../../assets/498-ambulance-flat.gif";
 
 const Home = () => {
   return (
@@ -29,7 +30,11 @@ const Home = () => {
             </div>
             <div className="ambulance-animation">
               <div className="car">
-                <img src={car} className="car1" />
+                {/* <img src={car} className="car1" /> */}
+                <img
+                  src={gif1}
+                  style={{ height: "300px", width: "300px", zIndex: "-99" }}
+                />
               </div>
             </div>
           </div>
