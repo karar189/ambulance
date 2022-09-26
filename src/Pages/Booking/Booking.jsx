@@ -88,7 +88,16 @@ const Booking = () => {
             }}
             onLoad={(map) => setMap(map)}
           >
-            <Marker position={center} img={ambu}>
+            <Marker
+              position={center}
+              img={ambu}
+              icon={{
+                url: ambu,
+                scaledSize: new window.google.maps.Size(50, 50),
+                origin: new window.google.maps.Point(0, 0),
+                anchor: new window.google.maps.Point(15, 15),
+              }}
+            >
               {directions && <DirectionsRenderer directions={directions} />}
             </Marker>
           </GoogleMap>
