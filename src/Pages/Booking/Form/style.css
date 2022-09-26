@@ -42,8 +42,7 @@
   padding: 10px;
   position: absolute;
   bottom: 50px;
-  /* top: 400px;
-  position: relative; */
+  
 }
 
 .back-btn {
@@ -84,3 +83,9 @@
 
 
 } */
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
