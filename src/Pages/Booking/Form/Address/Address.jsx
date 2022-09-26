@@ -3,6 +3,7 @@ import "./style.css";
 import {
   Autocomplete, // necessary for Autocomplete
 } from "@react-google-maps/api";
+import location from "../../../../assets/location.svg";
 
 const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
   const handleInputChangeAddress = (e) => {
@@ -56,12 +57,28 @@ const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
       <a
         href="#"
         ClassName="your-location"
-        style={{ textDecoration: "none" }}
+        style={{
+          textDecoration: "none",
+          color: "#5fddc7",
+          display: "block",
+          textAlign: "center",
+        }}
         onClick={() => {
           map.panTo(center);
           map.setZoom(15);
         }}
       >
+        <img
+          src={location}
+          alt="location"
+          style={{
+            width: "20px",
+            height: "20px",
+            position: "relative",
+            top: "5px",
+            marginRight: "5px",
+          }}
+        />
         Your Location
       </a>
     </div>
