@@ -75,8 +75,9 @@ const Booking = () => {
           </button> */}
           <GoogleMap
             mapContainerStyle={{
-              height: "400px",
-              width: "500px",
+              width: "300px",
+              height: "450px",
+              padding: "50px",
             }}
             zoom={10}
             center={center}

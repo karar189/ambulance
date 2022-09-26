@@ -1,9 +1,10 @@
 nav {
   display: flex;
- justify-content: space-around;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 2rem;
-} 
+  height: 40px;
+  padding: 30px;
+}
 
 .logo {
   height: 50px;
@@ -14,7 +15,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width:300px;
+  width: 300px;
 }
 
 /* .links Link{
@@ -27,13 +28,11 @@ nav {
 
 .btn {
   text-decoration: none;
-  background-color: #5FDCC6;
-  border-color: #5FDCC6 ;
+  background-color: #5fdcc6;
+  border-color: #5fdcc6;
   border-radius: 8px;
-  color:black;
+  color: black;
   font-size: 1.2rem;
   font-weight: 500;
   padding: 6px 16px;
-
 }
-

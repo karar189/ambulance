@@ -6,7 +6,7 @@
   background: #263238;
   opacity: 0.85;
   border-radius: 10px;
-  position: absolute;
+  position: relative;
 }
 
 .header {
@@ -14,15 +14,14 @@
   font-family: "Lato", sans-serif;
 }
 
-.loc-img{
+.loc-img {
   padding-right: 10px;
-
 }
 
 .progress-bar {
   position: absolute;
   bottom: -50px;
-  left: 0px;
+  left: 0;
   width: 400px;
   height: 10px;
   background-color: transparent;
@@ -42,7 +41,6 @@
   padding: 10px;
   position: absolute;
   bottom: 50px;
-  
 }
 
 .back-btn {
@@ -67,25 +65,4 @@
   font-size: 20px;
   font-weight: 400px;
   font-family: "Lato", sans-serif;
-}
-/* 
-.progress-bar{
-
-  position: static ;
-  width: 145px;
-  height: 9px;
-  left: 731px;
-  top: 969px;
-  
-  background: #5FDCC6;
-  border-radius: 0px 0px 0px 10px;
-
-
-
-} */
-
-.footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }

@@ -89,20 +89,21 @@ const Form = ({
             {page == FormTitles.length - 1 ? "Submit" : "Proceed"}
           </button>
         </div>
-
-        <div className="progress-bar">
-          <div
-            style={{
-              width:
-                page === 0
-                  ? "20.3%"
-                  : page == 1
-                  ? "46.6%"
-                  : page == 2
-                  ? "70%"
-                  : "100%",
-            }}
-          ></div>
+        <div className="progress-bar-card">
+          <div className="progress-bar">
+            <div
+              style={{
+                width:
+                  page === 0
+                    ? "20.3%"
+                    : page == 1
+                    ? "46.6%"
+                    : page == 2
+                    ? "70%"
+                    : "100%",
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </>
