@@ -10,6 +10,7 @@ import {
 } from "@react-google-maps/api";
 
 import "./style.css";
+import ambu from "../../assets/ambuu.svg";
 
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
@@ -32,10 +33,6 @@ const Booking = () => {
     ambulance: "",
   });
   const [map, setMap] = useState(/** @type google.maps.Map */ (null));
-  // const center = {
-  //   lat: 22.5726,
-  //   lng: 88.3639,
-  // };
   const [center, setcenter] = useState({
     lat: 22.5726,
     lng: 88.3639,
@@ -47,7 +44,7 @@ const Booking = () => {
         lng: position.coords.longitude,
       });
     });
-  }, [formData]);
+  }, []);
   if (!isLoaded) {
     return <div>Loading...</div>;
   }
@@ -91,8 +88,9 @@ const Booking = () => {
             }}
             onLoad={(map) => setMap(map)}
           >
-            <Marker position={center} />
-            {directions && <DirectionsRenderer directions={directions} />}
+            <Marker position={center} img={ambu}>
+              {directions && <DirectionsRenderer directions={directions} />}
+            </Marker>
           </GoogleMap>
         </div>
         <div className="container-form">
