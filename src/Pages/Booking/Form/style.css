@@ -12,8 +12,13 @@
 .header {
   color: rgb(249, 248, 248);
   font-family: "Lato", sans-serif;
+  position: absolute;
+  top: 20px;
 }
-
+.body {
+  position: absolute;
+  top: 104px;
+}
 .progress-bar {
   position: absolute;
   bottom: -50px;

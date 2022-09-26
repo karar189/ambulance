@@ -63,6 +63,8 @@ const Form = ({
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
+              fontSize: "15px",
+              fontWeight: "200",
             }}
           >
             <img

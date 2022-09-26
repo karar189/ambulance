@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 5px;
 }
 
 .hospital-name {
@@ -61,19 +62,36 @@
   font-size: 15px;
   line-height: 24px;
   color: #ffffff;
+  padding: 5px;
 }
 
-.name-dist-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+label {
+  width: 100%;
 }
 
-.hospital-2 {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #ffffff;
+.card-input-element {
+  display: none;
+}
+
+.card-input {
+  margin: 10px;
+}
+
+.card-input:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+  box-shadow: 4px 0 5px 4px #051d1e;
+  border-radius: 8px;
+  width: 100%;
+}
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+
+  height: 210px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }

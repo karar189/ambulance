@@ -9,6 +9,36 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
     setFormData({ ...formData, search: e.target.value });
     console.log(e.target.value);
   };
+
+  const hospitals = [
+    {
+      name: "Apollo Hospital, Kolkata",
+      dis: 2.5,
+      rating: 4.5,
+      time: 10,
+    },
+    {
+      name: "Hospital 2",
+      location: { lat: 12.9716, lng: 77.5946 },
+      dis: 2.5,
+      rating: 4.5,
+      time: 10,
+    },
+    {
+      name: "Hospital 3",
+      location: { lat: 12.9716, lng: 77.5946 },
+      dis: 2.5,
+      rating: 4.5,
+      time: 10,
+    },
+    {
+      name: "Hospital 4",
+      location: { lat: 12.9716, lng: 77.5946 },
+      dis: 2.5,
+      rating: 4.5,
+      time: 10,
+    },
+  ];
   return (
     <>
       <div className="search-bar">
@@ -23,42 +53,33 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
           />
         </Autocomplete>
       </div>
+
       <div className="hospital-list">
         <h2 className="near-hosp">Nearest Hospitals</h2>
         <div className="line">
           <hr></hr>
         </div>
-
-        <div className="hospital-1">
-          <div className="name-dist">
-            <div className="hospital-name">Apollo hospital, College square</div>
-            <div className="hospital-distance">10km</div>
-          </div>
-          <br />
-
-          {/* <div className="hospital-address">Address 1</div>  */}
-        </div>
-        <div className="ret">
-          <div className="rating">4.5/5</div>
-          <div className="emergency">ER available</div>
-          <div className="time">15mins</div>
-        </div>
-
-        <br></br>
-
-        <div className="hospital-2">
-          <div className="name-dist-2">
-            <div className="hospital-name-2">Fortis Hospital, Anandapur </div>
-            <div className="hospital-distance">15km</div>
-          </div>
-          <br />
-
-          {/* <div className="hospital-address">Address 1</div>  */}
-        </div>
-        <div className="ret">
-          <div className="rating">4.8/5</div>
-          <div className="emergency">ER available</div>
-          <div className="time">35mins</div>
+        <div className="scroll">
+          {hospitals.map((hospital) => (
+            <label>
+              <input
+                type="radio"
+                name="hospital"
+                className="card-input-element"
+              />
+              <div className="hospital-1 card-input">
+                <div className="name-dist">
+                  <div className="hospital-name">{hospital.name}</div>
+                  <div className="hospital-distance">{hospital.dis}km</div>
+                </div>
+                <div className="ret">
+                  <div className="rating">{hospital.rating}/5</div>
+                  <div className="emergency">ER available</div>
+                  <div className="time">{hospital.time}mins</div>
+                </div>
+              </div>
+            </label>
+          ))}
         </div>
       </div>
     </>
