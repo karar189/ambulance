@@ -6,7 +6,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   padding: 0 0 5.4rem;
 }
 
@@ -47,15 +47,15 @@
   display: flex;
   align-content: center;
 }
-.car{
+.car {
   padding-top: 60px;
 }
-.car1{
+.car1 {
   width: 200px;
   height: 200px;
   transition: bottom 2s;
 }
-.car1:hover{
+.car1:hover {
   position: relative;
   bottom: 20px;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
-import car from "../../assets/ambuu.svg"
+import car from "../../assets/ambuu.svg";
+import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -20,7 +21,11 @@ const Home = () => {
             </div>
 
             <div>
-              <button class="Acc-btn"><div className="Inside-button" > Create your Account</div></button>
+              <Link to="./booking" style={{ textDecoration: "none" }}>
+                <button class="Acc-btn">
+                  <div className="Inside-button">Book Now</div>
+                </button>
+              </Link>
             </div>
             <div className="ambulance-animation">
               <div className="car">
@@ -30,7 +35,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
