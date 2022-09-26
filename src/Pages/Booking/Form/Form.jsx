@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Address from "./Address/Address";
 import Ambulance from "./Ambulance/Ambulance";
 import Hospital from "./Hospital/Hospital";
+import ConfirmBook from "./ConfirmBook/ConfirmBook";
 import Progressbar from "../../../components/Progressbar/Progressbar";
 import locator from "../../../assets/LOGO-map.svg";
 import "./style.css";
@@ -20,6 +21,7 @@ const Form = ({
     "Enter your address",
     "Select Hospitals",
     "Select Ambulance",
+    "Your Ambulance is on the way",
   ];
 
   const pageDisplay = () => {
@@ -44,6 +46,8 @@ const Form = ({
         );
       case 2:
         return <Ambulance formData={formData} setFormData={setFormData} />;
+      case 3:
+        return <ConfirmBook />;
       default:
         return <Address formData={formData} setFormData={setFormData} />;
     }
@@ -89,7 +93,14 @@ const Form = ({
         <div className="progress-bar">
           <div
             style={{
-              width: page === 0 ? "20.3%" : page == 1 ? "66.6%" : "100%",
+              width:
+                page === 0
+                  ? "20.3%"
+                  : page == 1
+                  ? "46.6%"
+                  : page == 2
+                  ? "70%"
+                  : "100%",
             }}
           ></div>
         </div>
