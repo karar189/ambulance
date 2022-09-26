@@ -12,7 +12,8 @@ const Form = ({
   setFormData,
   forwardedRef,
   calculateRoute,
-  test,
+  center,
+  map,
 }) => {
   const [page, setPage] = useState(0);
   const FormTitles = [
@@ -29,6 +30,8 @@ const Form = ({
             formData={formData}
             setFormData={setFormData}
             forwardedRef={forwardedRef}
+            center={center}
+            map={map}
           />
         );
       case 1:

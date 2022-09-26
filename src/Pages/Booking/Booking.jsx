@@ -1,27 +1,22 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Form from "./Form/Form";
 import MapBoxL from "./MapboxL/MapBoxL";
 import {
   useJsApiLoader,
   GoogleMap,
   Marker,
-  Autocomplete, // necessary for Autocomplete
   DirectionsRenderer, // necessary for DirectionsRenderer
+  InfoWindow,
 } from "@react-google-maps/api";
 
 import "./style.css";
 
-const centre = {
-  lat: 22.5726,
-  lng: 88.3639,
-};
-
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
     googleMapsApiKey: "AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI",
     libraries: ["places"], // necessary for Autocomplete
   });
-  const [map, setMap] = useState(/** @type google.maps.Map */ (null));
 
   const addressRef = useRef();
   const searchRef = useRef();
@@ -36,6 +31,23 @@ const Booking = () => {
     hospital: "",
     ambulance: "",
   });
+  const [map, setMap] = useState(/** @type google.maps.Map */ (null));
+  // const center = {
+  //   lat: 22.5726,
+  //   lng: 88.3639,
+  // };
+  const [center, setcenter] = useState({
+    lat: 22.5726,
+    lng: 88.3639,
+  });
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setcenter({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
+  }, [formData]);
   if (!isLoaded) {
     return <div>Loading...</div>;
   }
@@ -56,11 +68,6 @@ const Booking = () => {
     // alert("Your ambulance is on the way"); //the function is working the logic is not!!
   };
 
-  function test() {
-    console.log(formData);
-    alert("Your data has been retrived");
-  }
-
   return (
     <>
       <div className="booking">
@@ -75,15 +82,16 @@ const Booking = () => {
               width: "500px",
             }}
             zoom={10}
-            center={centre}
+            center={center}
             options={{
               // zoomControl: false,
               streetViewControl: false,
               mapTypeControl: false,
               fullscreenControl: false,
             }}
+            onLoad={(map) => setMap(map)}
           >
-            <Marker position={centre} />
+            <Marker position={center} />
             {directions && <DirectionsRenderer directions={directions} />}
           </GoogleMap>
         </div>
@@ -93,11 +101,11 @@ const Booking = () => {
             setFormData={setFormData}
             forwardedRef={[addressRef, searchRef]}
             calculateRoute={calculateRoute}
-            test={test}
+            center={center}
+            map={map}
           />
         </div>
       </div>
-      <button onClick={test}>click me test</button>
     </>
   );
 };

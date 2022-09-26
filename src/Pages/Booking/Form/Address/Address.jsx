@@ -4,7 +4,7 @@ import {
   Autocomplete, // necessary for Autocomplete
 } from "@react-google-maps/api";
 
-const Address = ({ formData, setFormData, forwardedRef }) => {
+const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
   const handleInputChangeAddress = (e) => {
     setFormData({ ...formData, address: e.target.value });
     console.log(e.target.value);
@@ -53,7 +53,15 @@ const Address = ({ formData, setFormData, forwardedRef }) => {
         />
       </div>
       <br />
-      <a href="#" ClassName="your-location" style={{ textDecoration: "none" }}>
+      <a
+        href="#"
+        ClassName="your-location"
+        style={{ textDecoration: "none" }}
+        onClick={() => {
+          map.panTo(center);
+          map.setZoom(15);
+        }}
+      >
         Your Location
       </a>
     </div>
