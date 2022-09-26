@@ -18,7 +18,7 @@ const Form = ({
   const [page, setPage] = useState(0);
   const FormTitles = [
     "Enter your address",
-    "Select your Hospital",
+    "Select Hospitals",
     "Select Ambulance",
   ];
 
