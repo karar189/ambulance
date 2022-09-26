@@ -5,9 +5,10 @@ import Logogo from "../../../../assets/ambulance-go.svg";
 import Logoex from "../../../../assets/ambulance-excel.svg";
 // import Logoplus from "../../../../assets/ambulance-plus.svg";
 
-const Ambulance = () => {
+const Ambulance = ({ formData, setFormData }) => {
   return (
     <>
+      {/* wrap this ambulance div in link tag and link it to the ambulance booked page */}
       <div className="ablulance-card">
         <div className="ambrgo">
           <img src={Logogo} alt="Logogo" />
