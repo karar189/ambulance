@@ -21,11 +21,13 @@ const Booking = () => {
     googleMapsApiKey: "AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI",
     libraries: ["places"], // necessary for Autocomplete
   });
-  const [map, setMap] = useState(/** @type google.maps.GoogleMap */ (null));
+  const [map, setMap] = useState(/** @type google.maps.Map */ (null));
+
   const addressRef = useRef();
   const searchRef = useRef();
   const [distance, setDistance] = useState("");
   const [duration, setDuration] = useState("");
+  const [directions, setDirections] = useState(null);
   const [formData, setFormData] = useState({
     address: "",
     landmark: "",
@@ -38,22 +40,20 @@ const Booking = () => {
     return <div>Loading...</div>;
   }
   const calculateRoute = async () => {
-    if (addressRef.current.value === "" || searchRef.current.value === "") {
+    if (formData.address === "" || formData.search === "") {
+      alert("Please enter the address and search location");
     }
-    // eslint-disable-next-line no-undef
-    const directionsService = new google.maps.DirectionsService();
+    const directionsService = new window.google.maps.DirectionsService();
+    const origin = formData.address;
+    const destination = formData.search;
     const results = await directionsService.route({
-      origin: addressRef.current.value,
-      destination: searchRef.current.value,
-      // eslint-disable-next-line no-undef
-      travelMode: google.maps.TravelMode.DRIVING,
+      origin: origin,
+      destination: destination,
+      travelMode: window.google.maps.TravelMode.DRIVING,
     });
-    // setDirections(results);
-    // setFormData.address(results);
-    // setDistance(results.routes[0].legs[0].distance.text);
-    // setDuration(results.routes[0].legs[0].duration.text);
-    // console.log(results);
-    alert("Your ambulance is on the way"); //the function is working the logic is not!!
+    setDirections(results);
+
+    // alert("Your ambulance is on the way"); //the function is working the logic is not!!
   };
 
   function test() {
@@ -84,9 +84,7 @@ const Booking = () => {
             }}
           >
             <Marker position={centre} />
-            {formData.address && (
-              <DirectionsRenderer address={formData.address} />
-            )}
+            {directions && <DirectionsRenderer directions={directions} />}
           </GoogleMap>
         </div>
         <div className="container-form">
