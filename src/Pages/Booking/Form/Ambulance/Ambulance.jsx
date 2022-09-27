@@ -64,6 +64,7 @@ const Ambulance = ({ formData, setFormData }) => {
           </label>
         ))}
       </div>
+      <Payment />
     </>
   );
 };
