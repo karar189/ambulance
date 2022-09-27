@@ -3,7 +3,9 @@ import Payment from "./Payment/Payment";
 import "./style.css";
 import Logogo from "../../../../assets/ambulance-go.svg";
 import Logoex from "../../../../assets/ambulance-excel.svg";
-// import Logoplus from "../../../../assets/ambulance-plus.svg";
+import cash from "../../../../assets/cash.svg";
+
+import Drawer from "react-bottom-drawer";
 
 const Ambulance = ({ formData, setFormData }) => {
   const ambulanceList = [
@@ -29,6 +31,9 @@ const Ambulance = ({ formData, setFormData }) => {
       img: Logoex,
     },
   ];
+  const [isVisible, setIsVisible] = React.useState(true);
+  const openDrawer = React.useCallback(() => setIsVisible(true), []);
+  const closeDrawer = React.useCallback(() => setIsVisible(false), []);
   return (
     <>
       <div className="scroll2">
@@ -64,7 +69,37 @@ const Ambulance = ({ formData, setFormData }) => {
           </label>
         ))}
       </div>
-      <Payment />
+
+      <div className="payment-box">
+        <div className="logo">
+          <img
+            src={cash}
+            style={{ height: "50px", width: "60px" }}
+            alt="cashlogo"
+          />
+        </div>
+        <div className="type-payment">
+          <h2 style={{ fontSize: "21px", marginLeft: "10px" }}>Cash</h2>
+        </div>
+        <div className="pay-now">
+          <button className="pay-btn" onClick={openDrawer}>
+            Change {" >"}
+          </button>
+        </div>
+      </div>
+      {/* <center>
+        <button className="open-btn" onClick={openDrawer}>
+          SHOW ME THE DIALOG!
+        </button>
+      </center> */}
+      <Drawer
+        duration={250}
+        // hideScrollbars={true}
+        onClose={closeDrawer}
+        isVisible={isVisible}
+      >
+        <Payment />
+      </Drawer>
     </>
   );
 };

@@ -1,16 +1,23 @@
 import React from "react";
 
-const Payment = () => {
+function Payment() {
   return (
-    <>
-      <div className="payment-method">
-        <img src="#" />
-        Cash
+    <div className="drawer-content">
+      <div className="input">
+        <label>Card Number</label>
+        <input type="text" placeholder="Enter Card Number" />
+        <label>
+          <input type="number" />
+        </label>
+        <select name="" id="">
+          <option value="">Select Card</option>
+          <option value="">Visa</option>
+          <option value="">Master Card</option>
+          <option value="">Rupay</option>
+        </select>
       </div>
-
-      <div className="payment-options"></div>
-    </>
+    </div>
   );
-};
+}
 
 export default Payment;
