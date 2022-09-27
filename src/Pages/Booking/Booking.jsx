@@ -88,10 +88,6 @@ const Booking = () => {
     <>
       <div className="booking">
         <div className="container-map">
-          {/* <MapBoxL /> */}
-          {/* <button className="calculate-route" onClick={calculateRoute}>
-            Calculate Route
-          </button> */}
           <GoogleMap
             mapContainerStyle={{
               width: "300px",
@@ -126,8 +122,6 @@ const Booking = () => {
                 url: ambuMarker1,
                 img: ambuMarker1,
                 scaledSize: new window.google.maps.Size(50, 50),
-                origin: new window.google.maps.Point(0, 0),
-                anchor: new window.google.maps.Point(15, 15),
               }}
             />
           </GoogleMap>
