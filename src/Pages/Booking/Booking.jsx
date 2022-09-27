@@ -39,8 +39,8 @@ const Booking = () => {
     lng: 88.3639,
   });
   const [marker, setMarker] = useState({
-    lat: 22.5723,
-    lng: 88.3638,
+    lat: 22.33515,
+    lng: 88.29031,
   });
 
   useEffect(() => {
@@ -110,20 +110,21 @@ const Booking = () => {
           >
             <Marker
               position={center}
-              img={ambu}
               icon={{
                 url: ambu,
+                img: ambu,
                 scaledSize: new window.google.maps.Size(50, 50),
                 origin: new window.google.maps.Point(0, 0),
                 anchor: new window.google.maps.Point(15, 15),
               }}
-            >
-              {directions && <DirectionsRenderer directions={directions} />}
-            </Marker>
+            />
+            {directions && <DirectionsRenderer directions={directions} />}
+
             <Marker
               position={marker}
               icon={{
                 url: ambuMarker1,
+                img: ambuMarker1,
                 scaledSize: new window.google.maps.Size(50, 50),
                 origin: new window.google.maps.Point(0, 0),
                 anchor: new window.google.maps.Point(15, 15),

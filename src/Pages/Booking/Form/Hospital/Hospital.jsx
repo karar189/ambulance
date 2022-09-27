@@ -55,7 +55,7 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
       </div>
 
       <div className="hospital-list">
-        <h2 className="near-hosp">Nearest Hospitals</h2>
+        <h2 className="near-hosp">Famous Hospitals</h2>
         <div className="line">
           <hr></hr>
         </div>
