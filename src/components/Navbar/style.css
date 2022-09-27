@@ -13,9 +13,24 @@ nav {
 
 .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 300px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.links p {
+  color: #000620;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-content: center;
+}
+link p:hover {
+  color: #5fdcc6;
+  cursor: pointer;
 }
 
 /* .links Link{
@@ -30,9 +45,16 @@ nav {
   text-decoration: none;
   background-color: #5fdcc6;
   border-color: #5fdcc6;
-  border-radius: 8px;
+  border-radius: 5px;
   color: black;
+  height: 40px;
   font-size: 1.2rem;
   font-weight: 500;
   padding: 6px 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #a3fded;
+  border-color: #1b1b1b 1px solid;
+  transition: 0.2s ease-in;
 }

@@ -55,7 +55,7 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
       </div>
 
       <div className="hospital-list">
-        <h2 className="near-hosp">Famous Hospitals</h2>
+        <h2 className="near-hosp">Nearby Hospitals</h2>
         <div className="line">
           <hr />
         </div>
@@ -73,7 +73,7 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
                   })
                 }
               />
-              <div className="hospital-1 card-input">
+              <div className="hospital-1 card-input ">
                 <div className="name-dist">
                   <div className="hospital-name">{hospital.name}</div>
                   <div className="hospital-distance">{hospital.dis}km</div>

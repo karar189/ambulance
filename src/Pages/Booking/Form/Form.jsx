@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import Address from "./Address/Address";
 import Ambulance from "./Ambulance/Ambulance";
 import Hospital from "./Hospital/Hospital";
+import homeMarker from "../../../assets/homeMarker.svg";
 import ConfirmBook from "./ConfirmBook/ConfirmBook";
 import Progressbar from "../../../components/Progressbar/Progressbar";
 import locator from "../../../assets/LOGO-map.svg";
+import hospital from "../../../assets/hospitalLogo.svg";
+import cross from "../../../assets/cross.svg";
 import "./style.css";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 
@@ -18,10 +21,22 @@ const Form = ({
 }) => {
   const [page, setPage] = useState(0);
   const FormTitles = [
-    "Enter your address",
-    "Select Hospitals",
-    "Select Ambulance",
-    "Ambulance on the way",
+    {
+      title: "Enter your address",
+      icon: locator,
+    },
+    {
+      title: "Select your hospital",
+      icon: hospital,
+    },
+    {
+      title: "Select your Tier",
+      icon: cross,
+    },
+    {
+      title: "AMBR on the way",
+      icon: cross,
+    },
   ];
 
   const pageDisplay = () => {
@@ -63,20 +78,22 @@ const Form = ({
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-              fontSize: "15px",
+              fontSize: "14px",
               fontWeight: "200",
+              wordSpacing: "4px",
+              letterSpacing: "0.8px",
             }}
           >
             <img
               className="loc-img"
-              src={locator}
+              src={FormTitles[page].icon}
               alt="Logo"
               style={{
                 padding: "2px",
-                marginRight: "5px",
+                marginRight: "10px",
               }}
             />
-            <h1>{FormTitles[page]}</h1>
+            <h1>{FormTitles[page].title}</h1>
           </div>
         </div>
         <div className="body">{pageDisplay()}</div>

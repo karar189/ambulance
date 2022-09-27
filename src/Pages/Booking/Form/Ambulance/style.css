@@ -50,9 +50,11 @@ label {
 }
 
 .card-input-element:checked + .card-input {
-  box-shadow: 4px 0 5px 4px #051d1e;
-  border-radius: 8px;
-  width: 100%;
+  /* box-shadow: 4px 0 5px 4px #051d1e; */
+  border-left: #5fdcc6 2px solid;
+
+  /* border-radius: 8px; */
+  width: 280px;
 }
 div.scroll2 {
   margin: 4px, 4px;
