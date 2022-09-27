@@ -118,7 +118,12 @@ const Booking = () => {
             </Marker>
             <Marker
               position={center.lat + "0.000001" + center.lng + "0.000001"}
-              img={ambuMarker1}
+              icon={{
+                url: ambuMarker1,
+                scaledSize: new window.google.maps.Size(50, 50),
+                origin: new window.google.maps.Point(0, 0),
+                anchor: new window.google.maps.Point(15, 15),
+              }}
             />
           </GoogleMap>
         </div>
