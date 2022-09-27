@@ -38,6 +38,10 @@ const Booking = () => {
     lat: 22.5726,
     lng: 88.3639,
   });
+  const [marker, setMarker] = useState({
+    lat: 22.5723,
+    lng: 88.3638,
+  });
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -117,7 +121,7 @@ const Booking = () => {
               {directions && <DirectionsRenderer directions={directions} />}
             </Marker>
             <Marker
-              position={center.lat + "0.000001" + center.lng + "0.000001"}
+              position={marker}
               icon={{
                 url: ambuMarker1,
                 scaledSize: new window.google.maps.Size(50, 50),
