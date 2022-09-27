@@ -6,83 +6,64 @@ import Logoex from "../../../../assets/ambulance-excel.svg";
 // import Logoplus from "../../../../assets/ambulance-plus.svg";
 
 const Ambulance = ({ formData, setFormData }) => {
+  const ambulanceList = [
+    {
+      name: "Ambulance Go",
+      rating: 4.5,
+      time: 10,
+      price: 1000,
+      img: Logogo,
+    },
+    {
+      name: "Ambulance Excel",
+      rating: 4.5,
+      time: 10,
+      price: 1000,
+      img: Logoex,
+    },
+    {
+      name: "Ambulance Plus",
+      rating: 4.5,
+      time: 10,
+      price: 1000,
+      img: Logoex,
+    },
+  ];
   return (
     <>
-      {/* wrap this ambulance div in link tag and link it to the ambulance booked page */}
-      <div className="ablulance-card">
-        <div className="ambrgo">
-          <img src={Logogo} alt="Logogo" />
-          <div className="ambrgo2">
-            <div className="name-type">
-            <div className="ambulance-name">AMBR Go</div>
-            <br></br>
-            <div className="ambulance-type">
-              Standard ambulance, fastest service
-            </div>
-            </div>
-            </div>
-          <div className="ambulance-price">Rs. 500</div>
-          <div className="ambulance-time">30mins</div>
-        </div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="ablulance-card-2">
-        <div className="ambrgo-2">
-          <img src={Logoex} alt="Logoex" />
-          <div className="ambrgo2">
-            <div className="name-type">
-            <div className="ambulance-name">AMBR excel</div>
-            <br></br>
-            <div className="ambulance-type">
-             Trained helper, O2 facility.
-            </div>
-            </div>
-            </div>
-          <div className="ambulance-price">Rs. 1500</div>
-          <div className="ambulance-time">20mins</div>
-        </div>
-      </div>
-     
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="ablulance-card-3">
-        <div className="ambrgo-3">
-        <img src={Logoex} alt="Logoex" />
-          <div className="ambrgo2">
-            <div className="name-type">
-            <div className="ambulance-name">AMBR plus</div>
-            <br></br>
-            <div className="ambulance-type">
-             O2 & blood transfer facility.
-            </div>
-            </div>
-            </div>
-          <div className="ambulance-price">Rs. 5000</div>
-          <div className="ambulance-time">15mins</div>
-        </div>
-      </div>
-     
+      <div className="scroll2">
+        {ambulanceList.map((ambulance) => (
+          <label>
+            <input type="radio" className="card-input-element" />
+            <div className="ambulance-card card-input">
+              <div className="card1">
+                <img
+                  src={ambulance.img}
+                  alt="Logogo"
+                  style={{ height: "60px", width: "60px" }}
+                />
+              </div>
 
-      {/* <div className="payment">
-        <div className="payment-method">
-          <img src="#" />
-          Cash
-        </div>
-        <div className="payment-method">
-          Change
-          <span>
-            <a href="#">
-              <img src="#" />
-            </a>
-          </span>
-        </div>
-        <div className="payment-options">
-          <Payment />
-        </div>
-      </div> */}
+              <div className="card2">
+                <div className="abu-detail">
+                  <p>
+                    <b>{ambulance.name}</b>
+                  </p>
+                  <p>
+                    Standard ambulance, <br /> fastest service
+                  </p>
+                </div>
+                <div className="abu-price">
+                  <p className="priceColor">
+                    <b> ₹ 500</b>
+                  </p>
+                  <p>10 mins</p>
+                </div>
+              </div>
+            </div>
+          </label>
+        ))}
+      </div>
     </>
   );
 };

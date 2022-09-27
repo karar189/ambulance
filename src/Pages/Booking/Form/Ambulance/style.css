@@ -1,79 +1,65 @@
-.ambrgo {
+.ambulance-card {
+  height: 100px;
+  width: 260px;
   display: flex;
-  flex-direction: row;
+  padding: 1px;
   justify-content: space-between;
-  width: 85px;
-  height: 45px;
+  align-items: center;
+}
+p {
+  color: azure;
+  font-size: 12px;
 }
 
-.ambrgo2{
+.card2 {
+  padding: 0px 0px 0px 0px;
+
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 25px;
+}
+.abu-detail {
+  padding-right: 10px;
+}
+.abu-detail p {
+  font-size: 12px;
+  color: azure;
+}
+.abu-price {
+  padding-left: 5px;
+}
+.abu-price .priceColor {
+  font-size: 12px;
+
+  color: #5fdcc6;
+}
+label {
+  width: 100%;
+  padding: 0px;
 }
 
-.ambulance-name{
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  /* line-height: 24px; */
-  color: #FFFFFF;
-  
-
+.card-input-element {
+  display: none;
 }
 
-.ambulance-type{
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  /* line-height: 24px; */
-  color: #FFFFFF;
-  
+.card-input {
+  margin: 10px;
 }
 
-.ambulance-price{
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 24px;
-  color: #5FDCC6;
-
+.card-input:hover {
+  cursor: pointer;
 }
 
-.ambulance-time{
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 24px;
-  color: #FFFFFF;
-
+.card-input-element:checked + .card-input {
+  box-shadow: 4px 0 5px 4px #051d1e;
+  border-radius: 8px;
+  width: 100%;
 }
+div.scroll2 {
+  margin: 4px, 4px;
+  padding: 4px;
 
-.name-type{
-  display: flex;
-  flex-direction: row;
+  height: 310px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }
-
-.ambrgo-2{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 85px;
-  height: 45px;
-}
-
-.ambrgo-3{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 85px;
-  height: 45px;
-}
-
-
-
