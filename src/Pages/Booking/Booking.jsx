@@ -65,6 +65,19 @@ const Booking = () => {
 
     // alert("Your ambulance is on the way"); //the function is working the logic is not!!
   };
+  // const reverseGeocode = () => {
+  //   const url = `${geocodeJson}?key="AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI"&latlng=${center.lat},${center.lng}`;
+
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const address = data.results[0].formatted_address;
+  //       addressRef.current.value = address;
+  //       setFormData({ ...formData, address: address });
+  //     });
+
+  //   console.log(formData.address);
+  // };
 
   return (
     <>
@@ -112,6 +125,7 @@ const Booking = () => {
             calculateRoute={calculateRoute}
             center={center}
             map={map}
+            setcenter={setcenter}
           />
         </div>
       </div>

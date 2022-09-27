@@ -5,7 +5,14 @@ import {
 } from "@react-google-maps/api";
 import location from "../../../../assets/location.svg";
 
-const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
+const Address = ({
+  formData,
+  setFormData,
+  forwardedRef,
+  center,
+  setCenter,
+  map,
+}) => {
   const handleInputChangeAddress = (e) => {
     setFormData({ ...formData, address: e.target.value });
     console.log(e.target.value);
@@ -18,6 +25,9 @@ const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
     setFormData({ ...formData, pincode: e.target.value });
     console.log(e.target.value);
   };
+  const geocodeJson = "https://maps.googleapis.com/maps/api/geocode/json";
+  const geocodeApiKey = "AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI";
+
   return (
     <div className="address-box">
       <div className="address-wrap">
@@ -54,6 +64,7 @@ const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
         />
       </div>
       <br />
+
       <a
         href="#"
         ClassName="your-location"
@@ -66,6 +77,7 @@ const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
         onClick={() => {
           map.panTo(center);
           map.setZoom(15);
+          setFormData({ ...formData, address: center.lat + ", " + center.lng });
         }}
       >
         <img
