@@ -1,7 +1,7 @@
 import React from "react";
 import profile from "../../../../assets/driver-profile.svg";
 import "./style.css";
-
+import ambulance from "../../../../assets/ambulance-excel.svg"
 
 
 
@@ -11,7 +11,7 @@ const ConfirmBook = () => {
         <div className = "confirm-details">
 
          <div className = "driver-details">
-              <img src = {profile} alt="profile" />
+              <img className="profile" src = {profile} alt="profile" />
             
                    <p className = "driver">Driver
                    <br/><span><b>Rewant Chapri</b></span></p>
@@ -20,7 +20,7 @@ const ConfirmBook = () => {
              </div>
 
         <div className = "ambulance-details" >
-           <img src ="#" alt="car" />
+           <img className ="car" src = {ambulance} alt="car" />
            <div className = "ambulance-details">
                <div className = "vehicle">Vehicle no.</div>
                 <div className = "Vehicle-No">
