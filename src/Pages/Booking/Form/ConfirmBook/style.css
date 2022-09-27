@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+.confirm-details {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.driver-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile {
+  width: 85px;
+  height: 65px;
+  padding: 5px;
+}
+
+.driver {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d2d7d9;
+}
+.driver-ratings {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5fdcc6;
+}
+.driver-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.car {
+  width: 65px;
+  height: 65px;
+  padding: 19px;
+}
+
+.ambulance-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.con-amb {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 60;
+  font-size: 20px;
+  color: #d2d7d9;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #d2d7d9;
+
+}
+
+.phone{
+  height: 20px;
+  width: 30px;
+}
+
+.message{
+  height: 20px;
+  width: 30px;
+
+}
+
+.pay{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 60;
+  font-size: 20px;
+  color: #d2d7d9;
+}
+
+.payment-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cash{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #d2d7d9;
+}
+
+.cash-amount{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color:#5FDCC6;
+
+
+}
