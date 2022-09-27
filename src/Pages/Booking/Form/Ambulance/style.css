@@ -58,8 +58,11 @@ div.scroll2 {
   margin: 4px, 4px;
   padding: 4px;
 
-  height: 310px;
+  height: 250px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
+}
+.scroll2::-webkit-scrollbar {
+  width: 10px;
 }

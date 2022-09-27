@@ -57,7 +57,7 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
       <div className="hospital-list">
         <h2 className="near-hosp">Famous Hospitals</h2>
         <div className="line">
-          <hr></hr>
+          <hr />
         </div>
         <div className="scroll">
           {hospitals.map((hospital) => (
