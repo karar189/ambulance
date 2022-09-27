@@ -11,7 +11,7 @@ import {
 
 import "./style.css";
 import ambu from "../../assets/ambuu.svg";
-import ambuMarker from "../../assets/ambuMarker1.svg";
+import ambuMarker1 from "../../assets/ambuMarker1.svg";
 
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
@@ -118,6 +118,7 @@ const Booking = () => {
             </Marker>
             <Marker
               position={center.lat + "0.000001" + center.lng + "0.000001"}
+              img={ambuMarker1}
             />
           </GoogleMap>
         </div>
