@@ -21,7 +21,7 @@ const Ambulance = ({ formData, setFormData }) => {
             </div>
             </div>
             </div>
-          <div className="ambulance-price">Rs. 500</div>
+          <div className="ambulance-price">Rs.500</div>
           <div className="ambulance-time">30mins</div>
         </div>
       </div>

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+.confirm-details{
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin-top: 15px;
+
+}
+
+.driver-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  padding: 16px;
+}
+
+.driver {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d2d7d9;
+}
+.driver-ratings{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color:  #5FDCC6;
+
+}
+.driver-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+

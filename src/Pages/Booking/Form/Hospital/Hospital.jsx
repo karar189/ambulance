@@ -12,30 +12,30 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
 
   const hospitals = [
     {
-      name: "Apollo Hospital, Kolkata",
-      dis: 2.5,
+      name: "Apollo Hospital, College Square",
+      dis: 8.5,
+      rating: 4.3,
+      time: 10,
+    },
+    {
+      name: "Fortis Hospital, Anandapur",
+      location: { lat: 12.9716, lng: 77.5946 },
+      dis: 10.0,
       rating: 4.5,
       time: 10,
     },
     {
-      name: "Hospital 2",
+      name: "Pearless Hospital, New Garia",
       location: { lat: 12.9716, lng: 77.5946 },
-      dis: 2.5,
+      dis: 5.9,
       rating: 4.5,
       time: 10,
     },
     {
-      name: "Hospital 3",
+      name: "RG Kar, Belgachia",
       location: { lat: 12.9716, lng: 77.5946 },
-      dis: 2.5,
-      rating: 4.5,
-      time: 10,
-    },
-    {
-      name: "Hospital 4",
-      location: { lat: 12.9716, lng: 77.5946 },
-      dis: 2.5,
-      rating: 4.5,
+      dis: 4.8,
+      rating: 4.0,
       time: 10,
     },
   ];

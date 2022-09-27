@@ -23,7 +23,9 @@ const Address = ({ formData, setFormData, forwardedRef, center, map }) => {
       <div className="address-wrap">
         <Autocomplete>
           <input
-            className="adrs"
+
+
+aw className="adrs"
             type="text"
             placeholder="Eg. 16, Fulton street, Apt no. 12"
             value={formData.address}
