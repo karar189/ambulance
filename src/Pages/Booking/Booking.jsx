@@ -11,6 +11,7 @@ import {
 
 import "./style.css";
 import ambu from "../../assets/ambuu.svg";
+import ambuMarker1 from "../../assets/ambuMarker1.svg";
 
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
@@ -37,6 +38,7 @@ const Booking = () => {
     lat: 22.5726,
     lng: 88.3639,
   });
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setcenter({
@@ -64,6 +66,19 @@ const Booking = () => {
 
     // alert("Your ambulance is on the way"); //the function is working the logic is not!!
   };
+  // const reverseGeocode = () => {
+  //   const url = `${geocodeJson}?key="AIzaSyC7zvg4GcCd0EUescJBnU79y1-sN3qdfVI"&latlng=${center.lat},${center.lng}`;
+
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const address = data.results[0].formatted_address;
+  //       addressRef.current.value = address;
+  //       setFormData({ ...formData, address: address });
+  //     });
+
+  //   console.log(formData.address);
+  // };
 
   return (
     <>
@@ -101,6 +116,10 @@ const Booking = () => {
             >
               {directions && <DirectionsRenderer directions={directions} />}
             </Marker>
+            <Marker
+              position={center.lat + "0.000001" + center.lng + "0.000001"}
+              img={ambuMarker1}
+            />
           </GoogleMap>
         </div>
         <div className="container-form">
@@ -111,6 +130,7 @@ const Booking = () => {
             calculateRoute={calculateRoute}
             center={center}
             map={map}
+            setcenter={setcenter}
           />
         </div>
       </div>
