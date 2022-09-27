@@ -11,6 +11,7 @@ import {
 
 import "./style.css";
 import ambu from "../../assets/ambuu.svg";
+import ambuMarker from "../../assets/ambuMarker1.svg";
 
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
@@ -115,6 +116,9 @@ const Booking = () => {
             >
               {directions && <DirectionsRenderer directions={directions} />}
             </Marker>
+            <Marker
+              position={center.lat + "0.000001" + center.lng + "0.000001"}
+            />
           </GoogleMap>
         </div>
         <div className="container-form">
