@@ -12,7 +12,7 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
 
   const hospitals = [
     {
-      name: "Apollo Hospital, Kolkata",
+      name: "Ruby Hospital, Kolkata",
       dis: 2.5,
       rating: 4.5,
       time: 10,
@@ -66,6 +66,12 @@ const Hospital = ({ formData, setFormData, forwardedRef }) => {
                 type="radio"
                 name="hospital"
                 className="card-input-element"
+                onChange={() =>
+                  setFormData({
+                    ...formData,
+                    search: hospital.name,
+                  })
+                }
               />
               <div className="hospital-1 card-input">
                 <div className="name-dist">
