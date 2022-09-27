@@ -21,7 +21,7 @@ const Form = ({
     "Enter your address",
     "Select Hospitals",
     "Select Ambulance",
-    "Your Ambulance is on the way",
+    "Ambulance on the way",
   ];
 
   const pageDisplay = () => {
