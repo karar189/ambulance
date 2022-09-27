@@ -37,6 +37,7 @@ const Booking = () => {
     lat: 22.5726,
     lng: 88.3639,
   });
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setcenter({
