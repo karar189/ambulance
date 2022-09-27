@@ -9,34 +9,25 @@ const Home = () => {
     <>
       <div className="section-hero">
         <div className="hero-data">
-          <div className="container grid grid-two-column">
-            {" "}
-            <h1 class="primary-heading">
-              Fastest Way you can book an <br /> ambulance
-            </h1>
+          <h1 class="primary-heading">
+            Fastest Way you can book an <br /> ambulance
+          </h1>
+          <p className="secondary-heading">
+            One stop solution for your health emergencies
+          </p>
+          <div className="btn_1">
+            <Link to="./booking" style={{ textDecoration: "none" }}>
+              <button class="Acc-btn">
+                <p>Book Now</p>
+              </button>
+            </Link>
           </div>
-          <div className="secondary-heading">
-            <div className="grid grid-two-column">
-              <div className="hero-icon-style  icon"> </div>
-              <h2>One stop solution for your health emergencies</h2>
-            </div>
-
-            <div>
-              <Link to="./booking" style={{ textDecoration: "none" }}>
-                <button class="Acc-btn">
-                  <div className="Inside-button">Book Now</div>
-                </button>
-              </Link>
-            </div>
-            <div className="ambulance-animation">
-              <div className="car">
-                {/* <img src={car} className="car1" /> */}
-                <img className="ambulance-animation"
-                  src={gif1}
-                  style={{ height: "300px", width: "300px", zIndex: "-99" }}
-                />
-              </div>
-            </div>
+          <div className="ambulance-animation">
+            <img
+              className="car1"
+              src={gif1}
+              style={{ height: "300px", width: "300px" }}
+            />
           </div>
         </div>
       </div>
