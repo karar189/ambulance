@@ -46,6 +46,10 @@ const Booking = () => {
     lat: 22.56355631916497,
     lng: 88.4932595229455,
   };
+  const marker3 = {
+    lat: 22.554718464477304,
+    lng: 88.50654182177394,
+  };
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -122,6 +126,22 @@ const Booking = () => {
 
             <Marker
               position={marker}
+              icon={{
+                url: ambuMarker1,
+                img: ambuMarker1,
+                scaledSize: new window.google.maps.Size(50, 50),
+              }}
+            />
+            <Marker
+              position={marker2}
+              icon={{
+                url: ambuMarker1,
+                img: ambuMarker1,
+                scaledSize: new window.google.maps.Size(50, 50),
+              }}
+            />
+            <Marker
+              position={marker3}
               icon={{
                 url: ambuMarker1,
                 img: ambuMarker1,
