@@ -60,7 +60,7 @@ const Booking = () => {
         lng: position.coords.longitude,
       });
     });
-  }, []);
+  }, [formData]);
   if (!isLoaded) {
     return <div>Loading...</div>;
   }
