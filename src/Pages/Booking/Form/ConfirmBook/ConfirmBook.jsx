@@ -15,7 +15,7 @@ const ConfirmBook = () => {
 
           <div className="driver">
             <h3 className="driver-name">Driver</h3>
-            <p>Rewant Chapri</p>
+            <p>Sean Donawan</p>
           </div>
 
           <div className="driver-ratings">

@@ -10,21 +10,24 @@ import Drawer from "react-bottom-drawer";
 const Ambulance = ({ formData, setFormData }) => {
   const ambulanceList = [
     {
-      name: "Ambulance Go",
+      name: "AMBR Go",
+      desc: "Standard Ambulance fastest service",
       rating: 4.5,
       time: 10,
-      price: 1000,
+      price: 500,
       img: Logogo,
     },
     {
-      name: "Ambulance Excel",
+      name: "AMBR Excel",
+      desc: "trained helper, O2 facilities",
       rating: 4.5,
-      time: 10,
-      price: 1000,
+      time: 15,
+      price: 700,
       img: Logoex,
     },
     {
-      name: "Ambulance Plus",
+      name: "AMBR Plus",
+      desc: "trained helper, O2 & blood transfer",
       rating: 4.5,
       time: 10,
       price: 1000,
@@ -50,19 +53,17 @@ const Ambulance = ({ formData, setFormData }) => {
               </div>
 
               <div className="card2">
-                <div className="abu-detail">
+                <div className="abu-detail" style={{ width: "90x" }}>
                   <p>
                     <b>{ambulance.name}</b>
                   </p>
-                  <p>
-                    Standard ambulance, <br /> fastest service
-                  </p>
+                  <p>{ambulance.desc}</p>
                 </div>
                 <div className="abu-price">
                   <p className="priceColor">
-                    <b> ₹ 500</b>
+                    <b> ₹ {ambulance.price}</b>
                   </p>
-                  <p>10 mins</p>
+                  <p>{ambulance.time} mins</p>
                 </div>
               </div>
             </div>
