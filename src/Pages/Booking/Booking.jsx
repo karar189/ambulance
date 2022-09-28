@@ -13,6 +13,7 @@ import "./style.css";
 import ambu from "../../assets/ambuu.svg";
 import ambuMarker1 from "../../assets/ambuMarker1.svg";
 import ambuMarker2 from "../../assets/ambuMarker2.svg";
+import ambuMarker3 from "../../assets/ambuMarker3.svg";
 
 const Booking = () => {
   const { isLoaded } = useJsApiLoader({
@@ -136,8 +137,8 @@ const Booking = () => {
             <Marker
               position={marker2}
               icon={{
-                url: ambuMarker1,
-                img: ambuMarker1,
+                url: ambuMarker3,
+                img: ambuMarker3,
                 scaledSize: new window.google.maps.Size(50, 50),
               }}
             />
