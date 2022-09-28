@@ -51,7 +51,12 @@ const ConfirmBook = () => {
           <div className="number">+91 9883256806</div>
           <img className="phone" src={phone} alt="phone-icon" />
           <img className="message" src={message} alt="message-icon" />
-          <div className="number">Cancel</div>
+          <div
+            className="number"
+            style={{ color: "#5fdcc6", cursor: "pointer" }}
+          >
+            Cancel
+          </div>
         </div>
         <br />
         <div className="pay">Payment method</div>
@@ -61,7 +66,7 @@ const ConfirmBook = () => {
           <div className="cash-amount">Rs.1000</div>
         </div>
 
-        <hr></hr>
+        <hr />
       </div>
     </>
   );

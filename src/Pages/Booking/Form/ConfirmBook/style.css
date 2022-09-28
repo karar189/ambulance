@@ -126,11 +126,13 @@
 .phone {
   height: 20px;
   width: 30px;
+  cursor: pointer;
 }
 
 .message {
   height: 20px;
   width: 30px;
+  cursor: pointer;
 }
 
 .pay {
