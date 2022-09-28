@@ -2,9 +2,8 @@
 
 .confirm-details {
   height: 300px;
-  width: 300px;
-  padding: 10px;
-  margin-top: 15px;
+  width: 350px;
+  padding: 5px;
 }
 
 .driver-details {
@@ -16,7 +15,9 @@
 .profile {
   width: 85px;
   height: 65px;
-  padding: 5px;
+  padding: 0px;
+  position: relative;
+  top: 15px;
 }
 
 .driver {
@@ -25,6 +26,7 @@
   font-weight: 600;
   font-size: 14px;
   color: #d2d7d9;
+  padding: 2px;
 }
 .driver-ratings {
   font-family: "Lato";
@@ -32,6 +34,45 @@
   font-weight: 600;
   font-size: 14px;
   color: #5fdcc6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 21px;
+  left: -10px;
+}
+.driver-ratings p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.car-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.car {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d2d7d9;
+  width: 300px;
+}
+
+.car-name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  position: relative;
+  width: 300px;
 }
 .driver-name {
   font-family: "Lato";
@@ -52,13 +93,19 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.ambupic {
+  padding-top: 19px;
+}
 
 .con-amb {
   font-family: "Lato";
   font-style: normal;
+  font-weight: 700;
   font-weight: 60;
-  font-size: 20px;
+  font-size: 15px;
   color: #d2d7d9;
+  padding: 5px;
+  padding-top: 18px;
 }
 
 .contact-details {
@@ -67,54 +114,55 @@
   justify-content: space-between;
 }
 
-.number{
+.number {
   font-family: "Lato";
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 18px;
   color: #d2d7d9;
-
+  padding: 4px;
 }
 
-.phone{
+.phone {
   height: 20px;
   width: 30px;
 }
 
-.message{
+.message {
   height: 20px;
   width: 30px;
-
 }
 
-.pay{
+.pay {
   font-family: "Lato";
   font-style: normal;
+  font-weight: 700;
   font-weight: 60;
-  font-size: 20px;
+  font-size: 15px;
   color: #d2d7d9;
+  padding: 5px;
 }
 
-.payment-details{
+.payment-details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.cash{
+.cash {
   font-family: "Lato";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 18px;
   color: #d2d7d9;
+  padding: 4px;
+  margin-left: 2px;
 }
 
-.cash-amount{
+.cash-amount {
   font-family: "Lato";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  color:#5FDCC6;
-
-
+  color: #5fdcc6;
 }
