@@ -39,9 +39,13 @@ const Booking = () => {
     lng: 88.3639,
   });
   const [marker, setMarker] = useState({
-    lat: 22.33515,
-    lng: 88.29031,
+    lat: 22.560009355834076,
+    lng: 88.49183258777249,
   });
+  const marker2 = {
+    lat: 22.56355631916497,
+    lng: 88.4932595229455,
+  };
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
