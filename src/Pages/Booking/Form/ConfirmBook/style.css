@@ -95,6 +95,10 @@
 }
 .ambupic {
   padding-top: 19px;
+  padding-left: 19px;
+  padding-right: 10px;
+  height: 80px;
+  width: 60px;
 }
 
 .con-amb {

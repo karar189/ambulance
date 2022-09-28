@@ -48,12 +48,30 @@ const ConfirmBook = () => {
         <div className="con-amb">Contact Ambulance</div>
 
         <div className="contact-details">
-          <div className="number">+91 9883256806</div>
-          <img className="phone" src={phone} alt="phone-icon" />
-          <img className="message" src={message} alt="message-icon" />
+          <div className="number">+91 9330440021</div>
+          <img
+            className="phone"
+            onClick={() => {
+              window.open("tel:1234567890");
+            }}
+            src={phone}
+            alt="phone-icon"
+          />
+          <img
+            className="message"
+            src={message}
+            alt="message-icon"
+            onClick={() => {
+              window.open("https://wa.me/9330440021");
+            }}
+          />
           <div
             className="number"
             style={{ color: "#5fdcc6", cursor: "pointer" }}
+            onClick={() => {
+              alert("Booking Cancelled");
+              window.location.reload();
+            }}
           >
             Cancel
           </div>
