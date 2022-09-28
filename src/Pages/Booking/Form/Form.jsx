@@ -103,7 +103,7 @@ const Form = ({
             disabled={page == 0}
             onClick={() => setPage((currPage) => currPage - 1)}
           >
-            Back
+            {page == FormTitles.length - 1 ? "Arriving in " : "Back"}
           </button>
           <button
             className="next-btn"
@@ -114,14 +114,17 @@ const Form = ({
                 setPage((currPage) => currPage + 1);
                 if (page == FormTitles.length - 2) {
                   {
-                    // test();
                     calculateRoute();
                   }
                 }
               }
             }}
           >
-            {page == FormTitles.length - 1 ? "Submit" : "Proceed"}
+            {page == FormTitles.length - 1
+              ? "15mins"
+              : FormTitles.length - 2
+              ? "Submit"
+              : "Proceed"}
           </button>
         </div>
         <div className="progress-bar-card">
